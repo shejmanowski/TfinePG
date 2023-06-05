@@ -26,7 +26,7 @@ with col1:
             print(generated_img.shape)
 
         # dwnld_img = np.squeeze(generated_img, axis=-4)
-        dwnld_img = np.reshape(generated_img, (64, 48))
+        dwnld_img = np.reshape(generated_img, (128, 128))
         dwnld_img = (dwnld_img * 255).astype(np.uint8)
         data = im.fromarray(dwnld_img, 'L')
         data.save('img.jpeg')
@@ -35,9 +35,7 @@ with col1:
 
 with col2:
     # st.write(option)
-    col21, col22, col23 = st.columns([1, 1, 1])
-    with col22:
-        st.image(generated_img, use_column_width=True)
+    st.image(generated_img, use_column_width=True)
 
 st.divider()
 
@@ -154,3 +152,10 @@ st.write("- @Article{s21103465, AUTHOR = {Abdrakhmanova, Madina and Kuzdeuov, As
          "Dataset of Voice Commands with Visual and Thermal Video Streams}, JOURNAL = {Sensors}, VOLUME = {21}, "
          "YEAR = {2021}, NUMBER = {10}, ARTICLE-NUMBER = {3465}, URL = {https://www.mdpi.com/1424-8220/21/10/3465}, "
          "ISSN = {1424-8220}, DOI = {10.3390/s21103465}}")
+
+st.write("- Ghiass, Reza Shoja. \"Face Recognition Using Infrared Vision.\" Ph.D. diss., Université Laval, 2014")
+
+st.write("- Usman Cheema, Seungbin Moon, Sejong face database: A multi-modal disguise face database, Computer Vision "
+         "and Image Understanding, Volumes 208–209, 2021.")
+
+st.write("- IEEE OTCBVS WS Series Bench; Roland Miezianko, Terravic Research Infrared Database")
